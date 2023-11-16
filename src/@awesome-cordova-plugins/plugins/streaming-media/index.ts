@@ -90,6 +90,15 @@ export class StreamingMedia extends AwesomeCordovaNativePlugin {
   playVideo(videoUrl: string, options?: StreamingVideoOptions): void {}
 
   /**
+   * Streams an audio in foreground
+   *
+   * @param audioUrl {string} The URL of the audio stream
+   * @param options {StreamingAudioOptions} Options
+   */
+  @Cordova({ sync: true })
+  playAudioForeground(audioUrl: string, options?: StreamingAudioOptions): void {}
+
+  /**
    * Streams an audio
    *
    * @param audioUrl {string} The URL of the audio stream
